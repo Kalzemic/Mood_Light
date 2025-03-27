@@ -1,0 +1,29 @@
+.page-content {
+    display: flex;
+    color: #0f9df0;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    overflow-y: auto;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.signs {
+    display: flex;
+    flex-direction: row-reverse;
+
+    padding: 10px;
+}
