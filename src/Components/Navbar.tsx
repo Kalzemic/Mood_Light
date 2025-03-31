@@ -9,7 +9,7 @@ function Navbar() {
                 <li><Link to="/Projects">הפרויקטים שלנו</Link></li>
                 <li><Link to="/Design">עצבו שלט בעצמכם</Link></li>
                 <li><Link to="/Product-Info">מידע על המוצר</Link></li>
-                <li><Link to="/Contact">צרו קשר</Link></li>
+                <li><Link to="/Contact">שלחו לנו לוגו משלכם</Link></li>
             </ul>
         </nav>
     );

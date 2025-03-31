@@ -2,6 +2,7 @@ import { useState } from "react";
 import NeonSign from "./NeonSign";
 import backgrounds from './backgrounds.json'
 import './DesignPage.css'
+import emailjs from 'emailjs-com';
 const fonts = ["Sacramento", "Dancing Script", "Great Vibes", "Pacifico"];
 const colors = [
     { name: "Pink", value: "#ff00ff" },
@@ -15,16 +16,51 @@ function DesignPage() {
     const [font, setFont] = useState("Sacramento");
     const [color, setColor] = useState("#ff00ff");
     const [background, setBackground] = useState("background1.jpg")
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [phone, setPhone] = useState("");
+
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        const selectedColorName = colors.find(c => c.value === color)?.name || color;
+        const templateParams = {
+            name,
+            email,
+            phone,
+            text,
+            font,
+            color: selectedColorName,
+            background
+        };
+
+        emailjs.send(
+            'Mood_Light_1',
+            'order_form_1',
+            templateParams,
+            'ygrZNz9RXoV7GvbyF'
+        )
+            .then((response) => {
+                alert('הפרטים נשלחו בהצלחה!');
+                console.log('SUCCESS!', response.status, response.text);
+            }, (error) => {
+                alert('שגיאה בשליחה. נסו שוב מאוחר יותר.');
+                console.error('FAILED...', error);
+            });
+    };
+
 
     const [isOn, setIsOn] = useState(true);
 
 
     return (
         <div className="page-content">
-            <h1>עצבו שלט ניאון משלכם</h1>
+            <div className="signs">
+                <NeonSign text="Custom " font="Dancing Script" color="#ff00ff" width={260} height={260} isOn={true} />
+                <NeonSign text="Sign" font="Dancing Script" color="#0f9df0" width={260} height={260} isOn={true} />
+            </div>
             <div className="design-page">
                 <div className="custom-designer">
-                    <form className="design-form">
+                    <form className="design-form" onSubmit={handleSubmit}>
                         <div className="segment">
                             <label>הזינו את תוכן השלט</label>
                             <input type="text"
@@ -88,6 +124,25 @@ function DesignPage() {
                                 ))}
                             </div>
                         </div>
+                        <div className="segment">
+                            <label>שם:</label>
+                            <input type="text"
+                                value={name}
+                                onChange={(e) => setName(e.target.value)} />
+                        </div>
+                        <div className="segment">
+                            <label>:כתובת מייל</label>
+                            <input type="text"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)} />
+                        </div>
+                        <div className="segment">
+                            <label>:טלפון</label>
+                            <input type="text"
+                                value={phone}
+                                onChange={(e) => setPhone(e.target.value)} />
+                        </div>
+                        <button type="submit">שלח</button>
                     </form>
                 </div >
                 <div className="canvas-container">
