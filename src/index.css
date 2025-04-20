@@ -1,5 +1,5 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Avenir, Helvetica, 'Assistant', Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -78,3 +78,5 @@ button:focus-visible {
 @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Assistant&display=swap');
