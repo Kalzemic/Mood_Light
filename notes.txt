@@ -1,0 +1,8 @@
+
+
+
+
+1. center the navbar, background white, smaller text, logo on the left side 
+
+
+2. redo homepage, drop logo and make text on it brief, include links to designpage. 

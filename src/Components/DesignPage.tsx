@@ -54,10 +54,7 @@ function DesignPage() {
 
     return (
         <div className="page-content">
-            <div className="signs">
-                <NeonSign text="Custom " font="Dancing Script" color="#ff00ff" width={260} height={260} isOn={true} />
-                <NeonSign text="Sign" font="Dancing Script" color="#0f9df0" width={260} height={260} isOn={true} />
-            </div>
+
             <div className="design-page">
                 <div className="custom-designer">
                     <form className="design-form" onSubmit={handleSubmit}>

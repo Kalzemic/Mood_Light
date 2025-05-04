@@ -9,6 +9,7 @@
   text-align: center;
   animation: fadeInSlide 0.8s ease-in 1.2s forwards;
   opacity: 0;
+  overflow-y: hidden;
 
 }
 

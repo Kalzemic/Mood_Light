@@ -6,7 +6,7 @@
     align-items: flex-start;
     color: black;
     overflow-x: hidden;
-    max-width: 80%;
+    max-width: 75%;
 }
 
 .design-form {
@@ -16,7 +16,7 @@
     min-width: 450px;
     height: 550px;
     border-radius: 10px;
-    background: rgba(0, 0, 0, 0.4);
+    background: white;
     padding: 15px;
 }
 
