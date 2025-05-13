@@ -1,4 +1,5 @@
 
+import DesignPage from './DesignPage';
 import './Page.css'
 import './ProjectsPage.css'
 import projectsData from './projects.json'
@@ -18,7 +19,8 @@ function HomePage() {
                     <button>כבר יש לכם רעיון? לשליחה לחצו כאן</button>
 
                 </div>
-
+            </div>
+            <div className="page-content">
                 <div className="projects-grid">
                     {projectsData.projects.map((project, index) => (
                         <div className="project-card" key={index}>
@@ -27,6 +29,7 @@ function HomePage() {
                     ))}
                 </div>
             </div>
+            <DesignPage />
         </div>
     );
 }

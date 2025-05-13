@@ -1,9 +1,9 @@
 .page-content {
     margin-top: 30px;
     display: flex;
-    color: #0f9df0;
+    color: rgb(225, 8, 178);
     width: 99vw;
-    height: 100%;
+    height: 95vh;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -12,6 +12,7 @@
     overflow-x: hidden;
     opacity: 0;
     animation: fadeIn 0.5s ease-in forwards;
+
 }
 
 @keyframes fadeIn {
@@ -33,14 +34,20 @@
 
 .logo {
     max-width: 90%;
-    max-height: 85vh;
+    max-height: 80vh;
     object-fit: contain;
+    border-radius: 300px;
+    opacity: 0.8;
 }
 
 buttons {
     z-index: 100;
     display: flex;
     flex-direction: row;
+    gap: 20px 20px;
 
+}
 
+canvas-container NeonSign {
+    z-index: -1000;
 }

@@ -46,6 +46,7 @@
     color: rgb(225, 8, 178);
     text-decoration: none;
     font-size: 18px;
+    font-family: 'Assistant';
     display: inline-block;
     transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
     padding: 10px 15px;

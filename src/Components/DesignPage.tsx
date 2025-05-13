@@ -11,7 +11,10 @@ const colors = [
     { name: "Yellow", value: "#ffff00" },
     { name: "Green", value: "#00ff00" }
 ];
+const sizes = ["62x20cm  : רגיל", "94x30cm : גדול", "109x35cm : גדול מאוד"]
+const boards = ["ללא בורד אחורי", "חתוך לפי צורה"];
 function DesignPage() {
+    const [isOn, setIsOn] = useState(true);
     const [text, setText] = useState("Mood Light");
     const [font, setFont] = useState("Sacramento");
     const [color, setColor] = useState("#ff00ff");
@@ -19,6 +22,8 @@ function DesignPage() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
+    const [board, setBoard] = useState("");
+    const [size, setSize] = useState("");
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
@@ -30,7 +35,8 @@ function DesignPage() {
             text,
             font,
             color: selectedColorName,
-            background
+            board,
+            size
         };
 
         emailjs.send(
@@ -49,7 +55,7 @@ function DesignPage() {
     };
 
 
-    const [isOn, setIsOn] = useState(true);
+
 
 
     return (
@@ -79,34 +85,7 @@ function DesignPage() {
                                 ))}
                             </div>
                         </div>
-                        <div className="segment">
-                            <label>בחרו רקע</label>
-                            <div className="background-options">
-                                <button
-                                    type="button"
-                                    className={background === "" ? "selected-option" : ""}
-                                    onClick={() => setBackground("")}
-                                >
-                                    ללא רקע
-                                </button>
 
-                                {backgrounds.backgrounds.map((bg, index) => (
-                                    <button
-                                        type="button"
-                                        key={index}
-                                        className={bg === background ? "selected-option" : ""}
-                                        style={{
-                                            backgroundImage: `url(/images/${bg})`,
-                                            backgroundSize: "cover",
-                                            width: 60,
-                                            height: 60,
-                                        }}
-                                        onClick={() => setBackground(bg)}
-                                    />
-                                ))}
-
-                            </div>
-                        </div>
                         <div className="segment">
                             <label>בחרו צבע</label>
                             <div className="color-options">
@@ -118,6 +97,36 @@ function DesignPage() {
                                         style={{ backgroundColor: col.value, color: "white", width: 60, height: 60 }}
                                         onClick={() => setColor(col.value)}
                                     />
+                                ))}
+                            </div>
+                        </div>
+                        <div className="segment">
+                            <label>בחרו לוח אחורי</label>
+                            <div className="board-options">
+                                {boards.map((bo) => (
+                                    <button
+                                        type="button"
+                                        key={bo}
+                                        className={bo === board ? "selected-option" : ""}
+                                        onClick={() => setBoard(bo)}
+                                    >
+                                        {bo}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+                        <div className="segment">
+                            <label>בחרו גודל</label>
+                            <div className="size-options">
+                                {sizes.map((si) => (
+                                    <button
+                                        type="button"
+                                        key={si}
+                                        className={si === size ? "selected-option" : ""}
+                                        onClick={() => setSize(si)}
+                                    >
+                                        {si}
+                                    </button>
                                 ))}
                             </div>
                         </div>
@@ -144,7 +153,35 @@ function DesignPage() {
                 </div >
                 <div className="canvas-container">
                     <button onClick={() => { setIsOn(!isOn); }}>{isOn ? 'ON' : 'OFF'}</button>
-                    <NeonSign text={text} font={font} color={color} background={background} width={550} height={550} isOn={isOn} />
+                    <NeonSign text={text} font={font} color={color} background={background} width={450} height={450} isOn={isOn} />
+                    <div className="segment">
+                        <label>בחרו רקע</label>
+                        <div className="background-options">
+                            <button
+                                type="button"
+                                className={background === "" ? "selected-option" : ""}
+                                onClick={() => setBackground("")}
+                            >
+                                ללא רקע
+                            </button>
+
+                            {backgrounds.backgrounds.map((bg, index) => (
+                                <button
+                                    type="button"
+                                    key={index}
+                                    className={bg === background ? "selected-option" : ""}
+                                    style={{
+                                        backgroundImage: `url(/images/${bg})`,
+                                        backgroundSize: "cover",
+                                        width: 45,
+                                        height: 45,
+                                    }}
+                                    onClick={() => setBackground(bg)}
+                                />
+                            ))}
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div >
