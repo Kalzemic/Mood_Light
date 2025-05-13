@@ -66,12 +66,12 @@ function DesignPage() {
                     <form className="design-form" onSubmit={handleSubmit}>
                         <div className="segment">
                             <label htmlFor="text hashelet">הזינו את תוכן השלט</label>
-                            <input type="text"
+                            <input id="text hashelet" type="text"
                                 value={text}
                                 onChange={(e) => setText(e.target.value)} />
                         </div>
                         <div className="segment">
-                            <label htmlFor="Gofan hashelet">בחרו גופן</label>
+                            <label >בחרו גופן</label>
                             <div className="font-options">
                                 {fonts.map((fnt) => (
                                     <button
@@ -88,7 +88,7 @@ function DesignPage() {
                         </div>
 
                         <div className="segment">
-                            <label htmlFor="tseva hashelet">בחרו צבע</label>
+                            <label >בחרו צבע</label>
                             <div className="color-options">
                                 {colors.map((col) => (
                                     <button
@@ -103,7 +103,7 @@ function DesignPage() {
                             </div>
                         </div>
                         <div className="segment">
-                            <label htmlFor="bhirat-luah-ahori">בחרו לוח אחורי</label>
+                            <label >בחרו לוח אחורי</label>
                             <div className="board-options">
                                 {boards.map((bo) => (
                                     <button
@@ -119,7 +119,7 @@ function DesignPage() {
                             </div>
                         </div>
                         <div className="segment">
-                            <label htmlFor="godel">בחרו גודל</label>
+                            <label >בחרו גודל</label>
                             <div className="size-options">
                                 {sizes.map((si) => (
                                     <button
@@ -137,18 +137,21 @@ function DesignPage() {
                         <div className="segment">
                             <label htmlFor="shem">שם:</label>
                             <input type="text"
+                                id="shem"
                                 value={name}
                                 onChange={(e) => setName(e.target.value)} />
                         </div>
                         <div className="segment">
                             <label htmlFor="email">:כתובת מייל</label>
                             <input type="text"
+                                id="email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)} />
                         </div>
                         <div className="segment">
                             <label htmlFor="telephone">:טלפון</label>
                             <input type="text"
+                                id="telephone"
                                 value={phone}
                                 onChange={(e) => setPhone(e.target.value)} />
                         </div>
@@ -172,7 +175,7 @@ function DesignPage() {
                             {backgrounds.backgrounds.map((bg, index) => (
                                 <button
                                     type="button"
-                                    aira-label="reka"
+                                    aira-label="רקע"
                                     key={index}
                                     className={bg === background ? "selected-option" : ""}
                                     style={{
