@@ -71,11 +71,12 @@ function DesignPage() {
                                 onChange={(e) => setText(e.target.value)} />
                         </div>
                         <div className="segment">
-                            <label >בחרו גופן</label>
+                            <label htmlFor="gofan">בחרו גופן</label>
                             <div className="font-options">
                                 {fonts.map((fnt) => (
                                     <button
                                         type="button"
+                                        id="gofan"
                                         aria-label={fnt}
                                         key={fnt}
                                         className={fnt === font ? "selected-option" : ""}
@@ -88,11 +89,12 @@ function DesignPage() {
                         </div>
 
                         <div className="segment">
-                            <label >בחרו צבע</label>
+                            <label htmlFor="tseva">בחרו צבע</label>
                             <div className="color-options">
                                 {colors.map((col) => (
                                     <button
                                         type="button"
+                                        id="tseva"
                                         aria-label={col.name}
                                         key={col.value}
                                         className={col.value === color ? "selected-option" : ""}
@@ -103,11 +105,12 @@ function DesignPage() {
                             </div>
                         </div>
                         <div className="segment">
-                            <label >בחרו לוח אחורי</label>
+                            <label htmlFor="luah" >בחרו לוח אחורי</label>
                             <div className="board-options">
                                 {boards.map((bo) => (
                                     <button
                                         type="button"
+                                        id="luah"
                                         aria-label={bo}
                                         key={bo}
                                         className={bo === board ? "selected-option" : ""}
@@ -119,11 +122,12 @@ function DesignPage() {
                             </div>
                         </div>
                         <div className="segment">
-                            <label >בחרו גודל</label>
+                            <label htmlFor="godel" >בחרו גודל</label>
                             <div className="size-options">
                                 {sizes.map((si) => (
                                     <button
                                         type="button"
+                                        id="godel"
                                         aria-label={si}
                                         key={si}
                                         className={si === size ? "selected-option" : ""}
