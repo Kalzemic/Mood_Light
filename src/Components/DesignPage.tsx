@@ -3,7 +3,7 @@ import NeonSign from "./NeonSign";
 import backgrounds from './backgrounds.json'
 import './DesignPage.css'
 import emailjs from 'emailjs-com';
-const fonts = ["Sacramento", "Dancing Script", "Great Vibes", "Pacifico"];
+const fonts = ["Sacramento", "Dancing Script", "Great Vibes", "Pacifico", 'Assistant'];
 const colors = [
     { name: "Pink", value: "#ff00ff" },
     { name: "Cyan", value: "#00ffff" },
