@@ -1,4 +1,5 @@
 
+import { Link } from 'react-router-dom';
 import DesignPage from './DesignPage';
 import './Page.css'
 import './ProjectsPage.css'
@@ -15,8 +16,8 @@ function HomePage() {
                 </div>
                 <div className="buttons">
 
-                    <button>עצבו שלט בעצמכם</button>
-                    <button>כבר יש לכם רעיון? לשליחה לחצו כאן</button>
+                    <button> <Link to="/Design">עצבו שלט בעצמכם</Link></button>
+                    <button><Link to="/Custom">כבר יש לכם רעיון? לשליחה לחצו כאן</Link></button>
 
                 </div>
             </div>
