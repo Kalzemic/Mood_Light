@@ -16,8 +16,8 @@ function HomePage() {
                 </div>
                 <div className="buttons">
 
-                    <button> <Link to="/Design">עצבו שלט בעצמכם</Link></button>
-                    <button><Link to="/Custom">כבר יש לכם רעיון? לשליחה לחצו כאן</Link></button>
+                    <button aria-label="קישור לדף הזמנת שלט"> <Link to="/Design">עצבו שלט בעצמכם</Link></button>
+                    <button aria-label="קישור לשליחת רעיון משלכם לשלט"><Link to="/Custom">כבר יש לכם רעיון? לשליחה לחצו כאן</Link></button>
 
                 </div>
             </div>
@@ -25,7 +25,7 @@ function HomePage() {
                 <div className="projects-grid">
                     {projectsData.projects.map((project, index) => (
                         <div className="project-card" key={index}>
-                            <img src={project} />
+                            <img src={project} alt="תמונה עבור אחד הפרויקטים שלנו" />
                         </div>
                     ))}
                 </div>
