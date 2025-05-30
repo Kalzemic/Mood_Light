@@ -59,8 +59,7 @@ function DesignPage() {
 
 
     return (
-        <div className="page-content">
-
+        <div>
             <div className="design-page">
                 <div className="custom-designer">
                     <form className="design-form" onSubmit={handleSubmit}>
