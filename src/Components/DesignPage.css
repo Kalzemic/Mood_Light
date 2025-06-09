@@ -89,7 +89,7 @@ button:focus {
     }
 
     .canvas-container {
-        width: 100%;
+        width: 90%;
         padding: 10px;
         max-width: 90vw;
         overflow-x: hidden;
