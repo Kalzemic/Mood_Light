@@ -5,13 +5,14 @@ import './Page.css'
 import './ProjectsPage.css'
 import './Homapage.css'
 import projectsData from './projects.json'
-import BackgroundCarousel from './BackgroundCarousel';
+import CustomPage from './CustomPage';
+
 
 function HomePage() {
     return (
         <div>
 
-            <BackgroundCarousel />
+
             <div className="page-content">
                 <section id="homepage">
                     <div className="homepage-logo">
@@ -35,6 +36,9 @@ function HomePage() {
                 </section>
                 <section id="design">
                     <DesignPage />
+                </section>
+                <section id="custom">
+                    <CustomPage />
                 </section>
             </div>
 
