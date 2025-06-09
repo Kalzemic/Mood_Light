@@ -3,7 +3,14 @@ import NeonSign from "./NeonSign";
 import backgrounds from './backgrounds.json'
 import './DesignPage.css'
 import emailjs from 'emailjs-com';
-const fonts = ["Sacramento", "Dancing Script", "Great Vibes", "Pacifico", "Assistant"];
+const fonts = [
+    "Sacramento", "Dancing Script", "Great Vibes", "Pacifico", "Assistant",
+    "Rubik", "Amatic SC", "Baloo 2", "Bangers", "Caveat",
+    "Comfortaa", "Courgette", "Fugaz One", "Indie Flower", "Lobster",
+    "Montserrat", "Orbitron", "Playfair Display", "Raleway", "Satisfy",
+    "Teko", "Tinos", "Ubuntu", "Varela Round", "Yanone Kaffeesatz"
+];
+
 const colors = [
     { name: "Pink", value: "#ff00ff" },
     { name: "Cyan", value: "#00ffff" },
@@ -75,9 +82,8 @@ function DesignPage() {
                                 {fonts.map((fnt) => (
                                     <button
                                         type="button"
-                                        id="gofan"
-                                        aria-label={fnt}
                                         key={fnt}
+                                        style={{ fontFamily: fnt }}
                                         className={fnt === font ? "selected-option" : ""}
                                         onClick={() => setFont(fnt)}
                                     >
