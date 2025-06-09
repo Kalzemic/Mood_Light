@@ -13,11 +13,27 @@ const fonts = [
 
 const colors = [
     { name: "Pink", value: "#ff00ff" },
-    { name: "Cyan", value: "#00ffff" },
+    { name: "Hot Pink", value: "#ff69b4" },
+    { name: "Red", value: "#ff0000" },
     { name: "Orange", value: "#ff4500" },
     { name: "Yellow", value: "#ffff00" },
-    { name: "Green", value: "#00ff00" }
+    { name: "Light Yellow", value: "#ffffcc" },
+    { name: "Lime", value: "#bfff00" },
+    { name: "Green", value: "#00ff00" },
+    { name: "Turquoise", value: "#40e0d0" },
+    { name: "Cyan", value: "#00ffff" },
+    { name: "Light Blue", value: "#add8e6" },
+    { name: "Blue", value: "#0000ff" },
+    { name: "Indigo", value: "#4b0082" },
+    { name: "Purple", value: "#800080" },
+    { name: "Lavender", value: "#e6e6fa" },
+    { name: "White", value: "#ffffff" },
+    { name: "Warm White", value: "#fefbd8" },
+    { name: "Gold", value: "#ffd700" },
+    { name: "Silver", value: "#c0c0c0" },
+    { name: "Cool White", value: "#f5f5f5" }
 ];
+
 const sizes = ["62x20cm  : רגיל", "94x30cm : גדול", "109x35cm : גדול מאוד"]
 const boards = ["ללא בורד אחורי", "חתוך לפי צורה"];
 function DesignPage() {
