@@ -5,14 +5,13 @@ import './Page.css'
 import './ProjectsPage.css'
 import './Homapage.css'
 import projectsData from './projects.json'
+import BackgroundCarousel from './BackgroundCarousel';
 
 function HomePage() {
     return (
         <div>
-            <div className="background-wrapper">
-                <img src="project3.jpeg" className="background-img" alt="bg" />
-            </div>
 
+            <BackgroundCarousel />
             <div className="page-content">
                 <section id="homepage">
                     <div className="homepage-logo">
