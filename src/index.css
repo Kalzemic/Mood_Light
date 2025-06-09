@@ -76,7 +76,9 @@ button:focus-visible {
   }
 }
 
-
+html {
+  scroll-behavior: smooth;
+}
 
 
 @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');

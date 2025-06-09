@@ -3,13 +3,14 @@
     top: 0;
     right: 0;
     width: 100%;
-    height: 100px;
-    background: -webkit-linear-gradient(rgb(12, 128, 230), rgb(219, 16, 181));
-    padding: 10px 20px;
+    height: 130px;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 1px 20px;
     z-index: 1000;
     opacity: 0;
     animation: fadeIn 0.8s ease-in 1.2s forwards;
     overflow-x: auto;
+    overflow-y: hidden;
 }
 
 .navbar-content {
@@ -18,6 +19,7 @@
     justify-content: space-between;
     height: 100%;
     position: relative;
+    padding: 0 16px;
 }
 
 /* Center the UL using absolute positioning trick */
@@ -36,12 +38,28 @@
 }
 
 .navbar-left .logo {
-    height: 90px;
+    height: 200px;
     object-fit: contain;
     margin-left: 10px;
-    margin-bottom: 17px;
+    margin-bottom: 65px;
     border-radius: 200px;
+
 }
+
+@media (max-width: 768px) {
+    .navbar-left .logo {
+        height: 70px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar {
+        height: 80px;
+        padding: 0 12px;
+
+    }
+}
+
 
 .navbar a {
     color: rgb(255, 255, 255);
@@ -64,5 +82,63 @@
 
     to {
         opacity: 1;
+    }
+}
+
+/* Keep your existing styles */
+
+/* Hide hamburger and sidebar by default */
+.hamburger-menu {
+    display: none;
+    font-size: 32px;
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+}
+
+/* Sidebar default hidden */
+.sidebar {
+    position: fixed;
+    top: 80px;
+    /* adjust to match navbar height */
+    right: 0;
+    width: 70%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.95);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 999;
+    padding-top: 20px;
+}
+
+.sidebar.open {
+    transform: translateX(0);
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+    direction: rtl;
+}
+
+.sidebar li {
+    margin: 20px 20px;
+}
+
+.sidebar a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .desktop-menu {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
     }
 }

@@ -31,25 +31,6 @@
     padding: 10px;
 }
 
-.logo {
-    max-width: 90%;
-    max-height: 80vh;
-    object-fit: contain;
-    border-radius: 300px;
-    opacity: 0.95;
-    z-index: 1;
-    margin-top: 30px;
-}
-
-buttons {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    z-index: 1;
-    margin-top: 20px;
-    background-color: cadetblue;
-
-}
 
 canvas-container NeonSign {
     z-index: -1000;
