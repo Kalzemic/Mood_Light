@@ -10,6 +10,12 @@
     margin-top: 600px;
 }
 
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 .project-card {
     display: flex;
     height: 200px;
