@@ -18,3 +18,8 @@ homepage-buttons {
     background-color: cadetblue;
 
 }
+
+homepage-buttons button {
+    background-color: black;
+
+}

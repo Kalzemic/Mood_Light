@@ -31,6 +31,10 @@
     padding: 10px;
 }
 
+.button {
+    background-color: black;
+
+}
 
 canvas-container NeonSign {
     z-index: -1000;

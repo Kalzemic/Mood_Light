@@ -60,3 +60,17 @@ button:focus {
     /* or your highlight color */
     background-color: #d0e8ff;
 }
+
+
+@media(max-width: 768px) {
+    .design-page {
+        display: flex;
+        flex-direction: column;
+        /* Hebrew layout: canvas on left, form on right */
+        gap: 10px;
+        align-items: flex-start;
+        color: black;
+        overflow-x: hidden;
+        max-width: 90%;
+    }
+}

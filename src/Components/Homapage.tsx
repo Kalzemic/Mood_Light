@@ -16,7 +16,7 @@ function HomePage() {
             <div className="page-content">
                 <section id="homepage">
                     <div className="homepage-logo">
-                        <img src="MoodLightLogoWhite.png" alt="Mood Light Logo" className="logo" />
+                        <img src="MoodLightLogo.png" alt="Mood Light Logo" className="logo" />
                     </div>
                     <div className="homepage-buttons">
 
