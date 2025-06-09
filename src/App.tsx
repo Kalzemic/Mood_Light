@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import HomePage from './Components/Homapage'
 import Navbar from './Components/Navbar'
 import DesignPage from './Components/DesignPage'
+import BackgroundCarousel from './Components/BackgroundCarousel'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Navbar />
 
       <div className="main-container">
+        <BackgroundCarousel />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/Design" element={<div className="page-content"><DesignPage /></div>} />

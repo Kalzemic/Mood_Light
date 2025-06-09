@@ -163,7 +163,7 @@ function DesignPage() {
                 </div >
                 <div className="canvas-container">
                     <button onClick={() => { setIsOn(!isOn); }}>{isOn ? 'ON' : 'OFF'}</button>
-                    <NeonSign text={text} font={font} color={color} background={background} width={450} height={450} isOn={isOn} />
+                    <NeonSign text={text} font={font} color={color} background={background} width={500} height={470} isOn={isOn} />
                     <div className="segment">
                         <label>בחרו רקע</label>
                         <div className="background-options">
