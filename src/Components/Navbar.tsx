@@ -14,7 +14,7 @@ function Navbar() {
                     <div className="navbar-left">
                         <img src="MoodLightLogo.png" alt="Company Logo" className="logo" />
                     </div>
-                    <div className="navbar-center">
+                    <div className="navbar-center desktop-menu">
                         <ul>
                             <li><a href="#homepage">דף הבית</a></li>
                             <li><a href="#projects">הפרויקטים שלנו</a></li>
