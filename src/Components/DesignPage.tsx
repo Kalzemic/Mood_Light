@@ -197,8 +197,8 @@ function DesignPage() {
           font={font}
           color={color}
           background={background}
-          width={550}
-          height={550}
+          width={750}
+          height={750}
           isOn={isOn}
         />
 

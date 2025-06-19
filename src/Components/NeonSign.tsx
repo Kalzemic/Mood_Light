@@ -70,7 +70,7 @@ const NeonSign: React.FC<NeonSignProps> = ({ text, font, color, background, widt
     }, [text, font, color, background, height, width, isOn]);
 
 
-    return <canvas ref={canvasRef} className="neon-sign" />;
+    return <canvas ref={canvasRef} className="neon-sign" style={{ width: "100%", height: "auto", display: "block" }} />;
 };
 
 export default NeonSign;
