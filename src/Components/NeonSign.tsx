@@ -29,7 +29,7 @@ const NeonSign: React.FC<NeonSignProps> = ({ text, font, color, background, widt
         const drawText = (ctx: CanvasRenderingContext2D, width: number, height: number, isOn: boolean) => {
             ctx.textAlign = "center";
             ctx.textBaseline = "middle";
-            ctx.font = `80px '${font}', cursive`;
+            ctx.font = `120px '${font}', cursive`;
             // Stronger Neon Glow Effect
             if (isOn) {
                 ctx.shadowColor = color;
