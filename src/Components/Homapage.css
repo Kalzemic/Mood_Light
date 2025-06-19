@@ -1,5 +1,5 @@
 .homepage-logo{
-    margin-left:-3.7vw;
+    
 }
 .logo {
     max-width: 90%;
@@ -55,3 +55,23 @@
     transform: scale(1.05);
   }
   
+
+  @media (max-width: 600px) {
+    .homepage-buttons {
+      top: 120px;
+      flex-direction: column;
+      align-items: center;
+      padding: 16px;
+    }
+  
+    .homepage-buttons ul {
+      flex-direction: column;
+      gap: 12px;
+    }
+  
+    .homepage-buttons li a {
+      width: 100%;
+      text-align: center;
+      font-size: 0.95rem;
+    }
+  }
