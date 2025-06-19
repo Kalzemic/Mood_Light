@@ -51,7 +51,7 @@ function DesignPage() {
   const [text, setText] = useState("Mood Light");
   const [font, setFont] = useState("Sacramento");
   const [color, setColor] = useState("#ff00ff");
-  const [background, setBackground] = useState("background1.jpg");
+  const [background, setBackground] = useState("sign_background1.jpg");
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
