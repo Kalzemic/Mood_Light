@@ -136,7 +136,8 @@ function CustomPage() {
                         <img src={base64Image} alt="Preview" style={{ maxWidth: "300px", borderRadius: "8px" }} />
                     </div>
                 )}
-                <button type="submit">שלח</button>
+                <div className="segment">
+                <button type="submit">שלח</button> </div>
             </form>
         </div>
     );

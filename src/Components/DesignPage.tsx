@@ -184,8 +184,9 @@ function DesignPage() {
             <label htmlFor="phone">:טלפון</label>
             <input id="phone" type="text" value={phone} onChange={e => setPhone(e.target.value)} />
           </div>
-
+          <div className="segment">
           <button type="submit">שלח</button>
+          </div>
         </form>
       </div>
 

@@ -6,6 +6,7 @@ import './ProjectsPage.css'
 import './Homapage.css'
 import projectsData from './projects.json'
 import CustomPage from './CustomPage';
+import { motion } from 'framer-motion';
 
 
 function HomePage() {
@@ -16,13 +17,39 @@ function HomePage() {
             <div className="page-content">
                 <section id="homepage">
                     <div className="homepage-logo">
-                        <img src="MoodLightLogo.png" alt="Mood Light Logo" className="logo" />
+                    <motion.img
+                        initial={{ filter: "drop-shadow(0 0 1px rgb(255, 143, 225))" }}
+                        animate={{
+                            filter: [
+                                "drop-shadow(0 0 1px rgb(255, 143, 225))",
+                                "drop-shadow(0 0 10px rgb(255, 143, 225))",
+                                "drop-shadow(0 0 30px rgb(255, 143, 225))",
+                                "drop-shadow(0 0 60px rgb(255, 143, 225))",
+                                "drop-shadow(0 0 30px rgb(255, 143, 225))",
+                                "drop-shadow(0 0 10px rgb(255, 143, 225))",
+                                "drop-shadow(0 0 1px rgb(255, 143, 225))"
+                            ],
+                            scale:[1,1.1,1]
+                        }}
+                        whileHover={{
+                           
+                        }}
+                        transition={{
+                            duration: 3,
+                            repeat: Infinity,
+                            ease: "easeInOut"
+                        }}
+                        src="MoodLightLogo.png"
+                        alt="Mood Light Logo"
+                        className="logo"
+                    />
+
                     </div>
                     <div className="homepage-buttons">
-
-                        <button aria-label="קישור לדף הזמנת שלט"> <Link to="/Design">עצבו שלט בעצמכם</Link></button>
-                        <button aria-label="קישור לשליחת רעיון משלכם לשלט"><Link to="/Custom">כבר יש לכם רעיון? לשליחה לחצו כאן</Link></button>
-
+                        <ul>
+                        <li><a href="#design" aria-label="קישור לדף הזמנת שלט">עצבו שלט בעצמכם</a></li>
+                        <li><a href="#custom" aria-label="קישור לשליחת רעיון משלכם לשלט">כבר יש לכם רעיון?</a></li>
+                        </ul>
                     </div>
                 </section>
                 <section id="projects">
