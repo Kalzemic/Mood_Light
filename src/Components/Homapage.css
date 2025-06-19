@@ -55,6 +55,9 @@
   
 
   @media (max-width: 600px) {
+    .homepage-logo{
+        margin-left:4vw;
+    }
     .homepage-buttons {
       
       flex-direction: column;
