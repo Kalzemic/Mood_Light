@@ -3,13 +3,15 @@
     flex-direction: reverse;
     /* Hebrew layout: canvas on left, form on right */
     gap: 10px;
-    align-items: flex-start;
+    align-items: center;
     color: black;
     overflow-x: hidden;
     max-width: 100%;
     margin-top: 150px;
     margin-bottom: 50px;
-
+    background: linear-gradient(rgb(149, 185, 244), rgb(255, 143, 225));
+    border-radius: 20px;
+    padding: 25px;
 }
 
 .design-form {
@@ -18,9 +20,9 @@
     gap: 24px;
     min-width: 600px;
     height: 550px;
-    border-radius: 10px;
-    background: linear-gradient(rgb(149, 185, 244), rgb(255, 143, 225));
-    padding: 15px;
+    
+    
+    
     overflow-y: auto;
 }
 
@@ -35,7 +37,7 @@
     align-items: center;
     border-radius: 20px;
     padding: 0px 40px;
-    background: linear-gradient(rgb(149, 185, 244), rgb(255, 143, 225));
+    
 }
 
 button:hover {
