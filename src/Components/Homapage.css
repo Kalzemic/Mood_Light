@@ -1,6 +1,4 @@
-.homepage-logo{
-    
-}
+
 .logo {
     max-width: 90%;
     max-height: 80vh;
@@ -66,7 +64,7 @@
   
     .homepage-buttons ul {
       flex-direction: column;
-      gap: 12px;
+      gap: 30px;
     }
   
     .homepage-buttons li a {
