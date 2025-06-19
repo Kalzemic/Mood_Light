@@ -96,13 +96,15 @@ function DesignPage() {
 
           {/* Text Input */}
           <div className="segment">
-            <label htmlFor="text">הזינו את תוכן השלט</label>
-            <input id="text" type="text" value={text} onChange={e => setText(e.target.value)} />
+            <label htmlFor="text" className="block text-black font-bold mb-1">הזינו את תוכן השלט</label>
+            <input 
+            className=" rounded-2xl bg-black text-pink-400 border border-pink-400 rounded px-3 py-2 placeholder-pink-300"
+            id="text" type="text" value={text} onChange={e => setText(e.target.value)} />
           </div>
 
           {/* Font Selection */}
           <div className="segment">
-            <label>בחרו גופן</label>
+            <label className="block text-black font-bold mb-1">בחרו גופן</label>
             <div className="font-options">
               {fonts.map(fnt => (
                 <button
@@ -120,7 +122,7 @@ function DesignPage() {
 
           {/* Color Selection */}
           <div className="segment">
-            <label>בחרו צבע</label>
+            <label className="block text-black font-bold mb-1">בחרו צבע</label>
             <div className="color-options">
               {colors.map(col => (
                 <button
@@ -171,18 +173,24 @@ function DesignPage() {
 
           {/* User Info */}
           <div className="segment">
-            <label htmlFor="name">:שם</label>
-            <input id="name" type="text" value={name} onChange={e => setName(e.target.value)} />
+            <label className="block text-black font-bold mb-1" htmlFor="name">:שם</label>
+            <input 
+            className="rounded-2xl bg-black text-pink-400 border border-pink-400 rounded px-3 py-2 placeholder-pink-300"
+            id="name" type="text" value={name} onChange={e => setName(e.target.value)} />
           </div>
 
           <div className="segment">
-            <label htmlFor="email">:כתובת מייל</label>
-            <input id="email" type="text" value={email} onChange={e => setEmail(e.target.value)} />
+            <label className="block text-black font-bold mb-1" htmlFor="email">:כתובת מייל</label>
+            <input 
+            className="rounded-2xl bg-black text-pink-400 border border-pink-400 rounded px-3 py-2 placeholder-pink-300"
+            id="email" type="text" value={email} onChange={e => setEmail(e.target.value)} />
           </div>
 
           <div className="segment">
-            <label htmlFor="phone">:טלפון</label>
-            <input id="phone" type="text" value={phone} onChange={e => setPhone(e.target.value)} />
+            <label className="block text-black font-bold mb-1" htmlFor="phone">:טלפון</label>
+            <input 
+            className="rounded-2xl bg-black text-pink-400 border border-pink-400 rounded px-3 py-2 placeholder-pink-300"
+            id="phone" type="text" value={phone} onChange={e => setPhone(e.target.value)} />
           </div>
           <div className="segment">
           <button type="submit">שלח</button>

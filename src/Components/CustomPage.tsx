@@ -71,28 +71,34 @@ function CustomPage() {
             <form className="design-form" onSubmit={handleSubmit}>
                 <h2>שלחו לנו שלט משלכם</h2>
                 <div className="segment">
-                    <label htmlFor="shem">שם:</label>
-                    <input type="text"
+                    <label className="block text-black font-bold mb-1" htmlFor="shem">שם:</label>
+                    <input 
+                    className=" rounded-2xl bg-black text-pink-400 border border-pink-400 rounded px-3 py-2 placeholder-pink-300"
+                    type="text"
                         id="shem"
                         value={name}
                         onChange={(e) => setName(e.target.value)} />
                 </div>
                 <div className="segment">
-                    <label htmlFor="email">:כתובת מייל</label>
-                    <input type="text"
+                    <label className="block text-black font-bold mb-1" htmlFor="email">:כתובת מייל</label>
+                    <input
+                    className=" rounded-2xl bg-black text-pink-400 border border-pink-400 rounded px-3 py-2 placeholder-pink-300"
+                    type="text"
                         id="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)} />
                 </div>
                 <div className="segment">
-                    <label htmlFor="telephone">:טלפון</label>
-                    <input type="text"
+                    <label className="block text-black font-bold mb-1" htmlFor="telephone">:טלפון</label>
+                    <input 
+                    className=" rounded-2xl bg-black text-pink-400 border border-pink-400 rounded px-3 py-2 placeholder-pink-300"
+                    type="text"
                         id="telephone"
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)} />
                 </div>
                 <div className="segment">
-                    <label htmlFor="luah" >בחרו לוח אחורי</label>
+                    <label className="block text-black font-bold mb-1" htmlFor="luah" >בחרו לוח אחורי</label>
                     <div className="board-options">
                         {boards.map((bo) => (
                             <button
@@ -109,7 +115,7 @@ function CustomPage() {
                     </div>
                 </div>
                 <div className="segment">
-                    <label htmlFor="godel" >בחרו גודל</label>
+                    <label className="block text-black font-bold mb-1" htmlFor="godel" >בחרו גודל</label>
                     <div className="size-options">
                         {sizes.map((si) => (
                             <button
@@ -126,8 +132,16 @@ function CustomPage() {
                     </div>
                 </div>
                 <div className="segment">
-                    <label htmlFor="fileUpload">בחר תמונה של השלט:</label>
-                    <input type="file" id="fileUpload" accept="image/*" onChange={handleFileChange} />
+                    <label className="block text-black font-bold mb-1" htmlFor="fileUpload">בחר תמונה של השלט:</label>
+                    <input 
+                     className="text-pink-400 file:py-2 file:px-4
+                     file:rounded-full file:border-0
+                     file:text-sm file:font-semibold
+                     file:bg-pink-500 file:text-white
+                     hover:file:bg-pink-400
+                     bg-black rounded-2xl px-3 py-2
+                     mx-auto block w-full max-w-xs"
+                    type="file" id="fileUpload" accept="image/*" onChange={handleFileChange} />
                 </div>
 
                 {base64Image && (
