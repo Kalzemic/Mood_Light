@@ -1,4 +1,12 @@
 
+.homepage-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 100%;
+  }
+  
+
 .logo {
     max-width: 90%;
     max-height: 80vh;
@@ -55,9 +63,7 @@
   
 
   @media (max-width: 600px) {
-    .homepage-logo{
-        margin-left:40vw;
-    }
+
     .homepage-buttons {
       
       flex-direction: column;
