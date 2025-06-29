@@ -15,7 +15,7 @@ function App() {
       <Navbar />
 
       <div className="main-container">
-        <BackgroundCarousel />
+        {/* <BackgroundCarousel /> */}
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/Design" element={<div className="page-content"><DesignPage /></div>} />

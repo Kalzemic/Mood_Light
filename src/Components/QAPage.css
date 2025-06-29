@@ -1,22 +1,19 @@
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    /* Ensures exactly 4 columns */
+.qa-grid {
+    display: flex;
+    flex-direction: row;
+
     gap: 20px;
     padding: 10px;
     justify-content: center;
-    /* Centers the grid */
+    align-items: center;
     overflow-y: hidden;
-    margin-top: 600px;
+    margin-top: 100px;
+    width: 80%;
+    height: 80%;
 }
 
-@media (max-width: 768px) {
-    .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
 
-.project-card {
+.qa-card {
     display: flex;
     height: 200px;
     width: 200px;
@@ -28,14 +25,12 @@
     transition: transform 0.3s ease-in-out;
 }
 
-.project-card:hover {
+.qa-card:hover {
     transform: scale(1.1);
     box-shadow: 0 0 20px rgb(255, 143, 225);
 }
 
-.project-card img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 15px;
+.qa-head {
+    color: rgb(255, 143, 225),
+
 }

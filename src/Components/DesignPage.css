@@ -18,17 +18,24 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
-    min-width: 600px;
-    height: 550px;
-    
-    
-    
+    width: 500px;
+    height: 700px;
+
+
+
     overflow-y: auto;
 }
 
 .design-form button {
     background: black;
+    box-shadow: 0 0 20px rgb(255, 143, 225);
 }
+
+size-slider {
+    box-shadow: "0 0 20px rgb(255, 143, 225)";
+    background-color: black;
+}
+
 
 .canvas-container {
     flex-grow: 1;
@@ -37,7 +44,7 @@
     align-items: center;
     border-radius: 20px;
     padding: 0px 40px;
-    
+
 }
 
 button:hover {
@@ -75,7 +82,7 @@ button:focus {
 
 @media (max-width: 768px) {
     .design-page {
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
         padding: 10px;
         max-width: 90vw;

@@ -7,9 +7,11 @@ import './Homapage.css'
 import projectsData from './projects.json'
 import CustomPage from './CustomPage';
 import { motion } from 'framer-motion';
+import QAPage from './QAPage';
 
 
 function HomePage() {
+
     return (
         <div>
 
@@ -17,38 +19,38 @@ function HomePage() {
             <div className="page-content">
                 <section id="homepage">
                     <div className="homepage-logo">
-                    <motion.img
-                        initial={{ filter: "drop-shadow(0 0 1px rgb(255, 143, 225))" }}
-                        animate={{
-                            filter: [
-                                "drop-shadow(0 0 1px rgb(255, 143, 225))",
-                                "drop-shadow(0 0 10px rgb(255, 143, 225))",
-                                "drop-shadow(0 0 30px rgb(255, 143, 225))",
-                                "drop-shadow(0 0 60px rgb(255, 143, 225))",
-                                "drop-shadow(0 0 30px rgb(255, 143, 225))",
-                                "drop-shadow(0 0 10px rgb(255, 143, 225))",
-                                "drop-shadow(0 0 1px rgb(255, 143, 225))"
-                            ],
-                            scale:[1,1.1,1]
-                        }}
-                        whileHover={{
-                           
-                        }}
-                        transition={{
-                            duration: 3,
-                            repeat: Infinity,
-                            ease: "easeInOut"
-                        }}
-                        src="MoodLightLogo.png"
-                        alt="Mood Light Logo"
-                        className="logo"
-                    />
+                        <motion.img
+                            initial={{ filter: "drop-shadow(0 0 1px rgb(255, 143, 225))" }}
+                            animate={{
+                                filter: [
+                                    "drop-shadow(0 0 1px rgb(255, 143, 225))",
+                                    "drop-shadow(0 0 10px rgb(255, 143, 225))",
+                                    "drop-shadow(0 0 30px rgb(255, 143, 225))",
+                                    "drop-shadow(0 0 60px rgb(255, 143, 225))",
+                                    "drop-shadow(0 0 30px rgb(255, 143, 225))",
+                                    "drop-shadow(0 0 10px rgb(255, 143, 225))",
+                                    "drop-shadow(0 0 1px rgb(255, 143, 225))"
+                                ],
+                                scale: [1, 1.1, 1]
+                            }}
+                            whileHover={{
+
+                            }}
+                            transition={{
+                                duration: 3,
+                                repeat: Infinity,
+                                ease: "easeInOut"
+                            }}
+                            src="MoodLightLogo.png"
+                            alt="Mood Light Logo"
+                            className="logo"
+                        />
 
                     </div>
                     <div className="homepage-buttons">
                         <ul>
-                        <li><a href="#design" aria-label="קישור לדף הזמנת שלט">עצבו שלט בעצמכם</a></li>
-                        <li><a href="#custom" aria-label="קישור לשליחת רעיון משלכם לשלט">כבר יש לכם רעיון?</a></li>
+                            <li><a href="#design" aria-label="קישור לדף הזמנת שלט">עצבו שלט בעצמכם</a></li>
+                            <li><a href="#custom" aria-label="קישור לשליחת רעיון משלכם לשלט">כבר יש לכם רעיון?</a></li>
                         </ul>
                     </div>
                 </section>
@@ -67,6 +69,10 @@ function HomePage() {
                 <section id="custom">
                     <CustomPage />
                 </section>
+                <section id="qa">
+                    <QAPage />
+                </section>
+
             </div>
 
         </div>
