@@ -27,7 +27,7 @@ const QAPage = () => {
             >
 
 
-                {questions.map((question, index) => (
+                {questions.map((question) => (
                     <div className="qa-card">
                         <h2>{question}</h2>
                     </div>

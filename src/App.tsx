@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import HomePage from './Components/Homapage'
 import Navbar from './Components/Navbar'
 import DesignPage from './Components/DesignPage'
-import BackgroundCarousel from './Components/BackgroundCarousel'
+
 
 function App() {
   return (
