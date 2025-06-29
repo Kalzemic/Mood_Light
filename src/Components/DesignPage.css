@@ -9,9 +9,10 @@
     max-width: 100%;
     margin-top: 150px;
     margin-bottom: 50px;
-    background: linear-gradient(rgb(149, 185, 244), rgb(255, 143, 225));
+    /* background: linear-gradient(rgb(149, 185, 244), rgb(255, 143, 225)); */
     border-radius: 20px;
     padding: 25px;
+    box-shadow: 0 0 20px rgb(255, 143, 225);
 }
 
 .design-form {
