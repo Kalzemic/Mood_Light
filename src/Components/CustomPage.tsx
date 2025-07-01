@@ -54,10 +54,10 @@ function CustomPage() {
     const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const uploadedFile = e.target.files?.[0];
         if (uploadedFile) {
-            setSelectedFile(uploadedFile); // ✅ needed for Cloudinary
+            setSelectedFile(uploadedFile);
             const reader = new FileReader();
             reader.onloadend = () => {
-                setBase64Image(reader.result as string); // preview only
+                setBase64Image(reader.result as string);
             };
             reader.readAsDataURL(uploadedFile);
         }
@@ -67,9 +67,9 @@ function CustomPage() {
     async function uploadImageToCloudinary(file: File): Promise<string> {
         const formData = new FormData();
         formData.append("file", file);
-        formData.append("upload_preset", "moodlight_custom"); // your preset name
+        formData.append("upload_preset", "moodlight_custom");
 
-        const cloudName = "kalzemic"; // from your dashboard
+        const cloudName = "kalzemic";
 
         const response = await fetch(`https://api.cloudinary.com/v1_1/${cloudName}/image/upload`, {
             method: "POST",
