@@ -6,21 +6,7 @@ notes:
 
 
 
-better page sepration, figure out nice transitions
 
-
-
-
-
- 
-
-
-
-
-
-
-designform color options: 
-    add rgb option 
 
 
 
@@ -29,9 +15,5 @@ in projectsPage:
     upon selection have a project picture show fullscreen 
 
 
-copy size-slider to customPage
 
 
-add QA
-
-add tail at the end of the site  

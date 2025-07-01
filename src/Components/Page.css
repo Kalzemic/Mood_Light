@@ -51,11 +51,48 @@
     padding: 10px;
 }
 
-.button {
-    background-color: black;
 
-}
 
 canvas-container NeonSign {
     z-index: -1000;
+}
+
+
+
+.contact-footer {
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    direction: rtl;
+    border-top: 2px solid #ff7b00;
+}
+
+.contact-footer .footer-content span,
+.contact-footer .footer-legal span {
+    display: block;
+    margin: 6px 0;
+}
+
+.contact-footer a {
+    color: white;
+    text-decoration: underline;
+    transition: color 0.2s ease-in-out;
+}
+
+.contact-footer a:hover {
+    color: rgb(225, 8, 178);
+}
+
+.footer-legal {
+    margin-top: 20px;
+    direction: ltr;
+}
+
+.signature {
+    margin-top: 8px;
+    font-style: italic;
+    font-weight: 300;
+    color: rgb(225, 8, 178);
 }
