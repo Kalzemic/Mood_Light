@@ -14,7 +14,7 @@ const fonts = [
     "Teko", "Tinos", "Ubuntu", "Varela Round", "Yanone Kaffeesatz"
 ];
 
-const cable_entries = ["ימין", "שמאל", "מעלה", "מטה"]
+const cable_entries = ["ימין", "שמאל"]
 const hang_types = ["ברגים", "חבלים"]
 const cable_color = ["שחור", "שקוף"]
 
@@ -267,7 +267,7 @@ function DesignPage() {
                         </div>
                     )}
                     <div className="segment">
-                        <label>בחרו את כיוון כניסת הכבל לשלט</label>
+                        <label>בחרו מאיפה תרצו שהכבל ייצא מהשלט</label>
                         <div className="board-options">
                             {cable_entries.map(ce => (
                                 <button
