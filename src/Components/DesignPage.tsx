@@ -64,9 +64,9 @@ const boards = [
 ];
 
 const board_image: any = {
-    "ללא בורד אחורי": "/no_board.png",
-    "חתוך לפי צורה": "/shape_board.png",
-    "בורד מרובע": "/square_board.png"
+    "ללא בורד אחורי": "/no_board.jpg",
+    "חתוך לפי צורה": "/shape_board.jpg",
+    "בורד מרובע": "/square_board.jpg"
 }
 
 function DesignPage() {
@@ -198,13 +198,14 @@ function DesignPage() {
                         </div>
                         {board != "" &&
                             <div className="selected-board">
-                                <img
-                                    alt="board-image"
+                                <div
+
                                     style={{
                                         backgroundImage: `url(/boards${board_image[board]})`,
+                                        backgroundPosition: "center",
                                         backgroundSize: "cover",
-                                        width: 100,
-                                        height: 100,
+                                        width: 200,
+                                        height: 200,
                                     }} />
                             </div>
                         }
