@@ -96,3 +96,19 @@ canvas-container NeonSign {
     font-weight: 300;
     color: rgb(225, 8, 178);
 }
+
+@media (max-width: 768px) {
+    .transition-sign {
+        display: flex;
+        background-color: rgba(0, 0, 0, 0.1);
+        width: 90vw;
+        height: 30vh;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px;
+        margin-top: 300px;
+        margin-bottom: 100px;
+        box-shadow: 0 0 30px rgb(255, 143, 225);
+    }
+
+}
