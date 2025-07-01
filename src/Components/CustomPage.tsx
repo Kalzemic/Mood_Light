@@ -30,7 +30,7 @@ const board_image: any = {
     "בורד מרובע": "/square_board.jpg"
 }
 
-const cable_entries = ["ימין", "שמאל"]
+const cable_entries = ["ימין", "שמאל", "למעלה", "למטה"]
 const hang_types = ["ברגים", "חבלים"]
 const cable_color = ["שחור", "שקוף"]
 

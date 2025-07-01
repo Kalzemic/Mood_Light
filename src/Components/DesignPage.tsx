@@ -14,7 +14,7 @@ const fonts = [
     "Teko", "Tinos", "Ubuntu", "Varela Round", "Yanone Kaffeesatz"
 ];
 
-const cable_entries = ["ימין", "שמאל"]
+const cable_entries = ["ימין", "שמאל", "למעלה", "למטה"]
 const hang_types = ["ברגים", "חבלים"]
 const cable_color = ["שחור", "שקוף"]
 
