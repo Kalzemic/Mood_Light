@@ -49,55 +49,86 @@ function CustomPage() {
     const [cableEntry, setCableEntry] = useState("")
     const [cableColor, setCableColor] = useState("")
     const [hangType, setHangType] = useState("")
+    const [selectedFile, setSelectedFile] = useState<File | null>(null);
 
     const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const uploadedFile = e.target.files?.[0];
         if (uploadedFile) {
+            setSelectedFile(uploadedFile); // ✅ needed for Cloudinary
             const reader = new FileReader();
             reader.onloadend = () => {
-                setBase64Image(reader.result as string);
+                setBase64Image(reader.result as string); // preview only
             };
             reader.readAsDataURL(uploadedFile);
         }
     };
 
 
-    const handleSubmit = (e: React.FormEvent) => {
+    async function uploadImageToCloudinary(file: File): Promise<string> {
+        const formData = new FormData();
+        formData.append("file", file);
+        formData.append("upload_preset", "moodlight_custom"); // your preset name
+
+        const cloudName = "kalzemic"; // from your dashboard
+
+        const response = await fetch(`https://api.cloudinary.com/v1_1/${cloudName}/image/upload`, {
+            method: "POST",
+            body: formData,
+        });
+
+        if (!response.ok) {
+            throw new Error("Upload failed");
+        }
+
+        const data = await response.json();
+        return data.secure_url; // ✅ hosted image URL
+    }
+
+
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
-        const templateParams = {
-            name,
-            email,
-            phone,
-            board,
-            width,
-            height,
-            cableEntry,
-            cableColor,
-            hangType,
-            image: base64Image || "לא צורפה תמונה",
-        };
+        try {
+            let imageUrl = "לא צורפה תמונה";
 
-        emailjs.send(
-            'Mood_Light_1',
-            'order_form_custom',
-            templateParams,
-            'ygrZNz9RXoV7GvbyF'
-        )
-            .then((response) => {
-                alert('הפרטים נשלחו בהצלחה!');
-                console.log('SUCCESS!', response.status, response.text);
-                setName("");
-                setEmail("");
-                setPhone("");
-                setBoard("");
-                setSize("");
-                setBase64Image(null);
-            }, (error) => {
-                alert('שגיאה בשליחה. נסו שוב מאוחר יותר.');
-                console.error('FAILED...', error);
-            });
+            if (selectedFile) {
+                imageUrl = await uploadImageToCloudinary(selectedFile);
+            }
+
+            const templateParams = {
+                name,
+                email,
+                phone,
+                board,
+                width,
+                height,
+                cableEntry,
+                cableColor,
+                hangType,
+                image: imageUrl, // ✅ final hosted URL
+            };
+
+            await emailjs.send(
+                'Mood_Light_1',
+                'order_form_custom',
+                templateParams,
+                'ygrZNz9RXoV7GvbyF'
+            );
+
+            alert('הפרטים נשלחו בהצלחה!');
+            setName("");
+            setEmail("");
+            setPhone("");
+            setBoard("");
+            setSize("");
+            setBase64Image(null);
+            setSelectedFile(null); // ✅ reset
+        } catch (error) {
+            console.error('FAILED...', error);
+            alert('שגיאה בשליחה. נסו שוב מאוחר יותר.');
+        }
     };
+
 
 
     return (
