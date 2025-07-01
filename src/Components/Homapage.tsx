@@ -110,8 +110,8 @@ function HomePage() {
 
             <footer className="contact-footer">
                 <div className="footer-content">
-                    {/* <span>📞 טלפון: 052-577-2886</span><br />
-                    <span>✉️ אימייל: minimalbody24@gmail.com</span><br /> */}
+                    {/* <span>📞 טלפון: 052-577-2886</span><br /> */}
+                    <span>✉️ אימייל: mood.light.sa@gmail.com</span><br />
                     <div className="footer-legal">
                         <span>© {new Date().getFullYear()} Mood-Light-ltd — כל הזכויות שמורות</span><br />
                         <span className="signature">Made by Michael Zizov</span>
