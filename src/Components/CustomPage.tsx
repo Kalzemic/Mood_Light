@@ -180,7 +180,7 @@ function CustomPage() {
                             <img
                                 alt="board-image"
                                 style={{
-                                    backgroundImage: `url(/boards/${board_image[board]})`,
+                                    backgroundImage: `url(/boards${board_image[board]})`,
                                     backgroundSize: "cover",
                                     width: 100,
                                     height: 100,
