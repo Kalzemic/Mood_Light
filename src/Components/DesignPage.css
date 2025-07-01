@@ -36,6 +36,11 @@ size-slider {
     background-color: black;
 }
 
+.segment h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgb(255, 143, 225);
+}
 
 .canvas-container {
     flex-grow: 1;

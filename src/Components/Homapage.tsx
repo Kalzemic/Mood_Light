@@ -55,7 +55,7 @@ function HomePage() {
                         </ul>
                     </div>
                 </section>
-                <TransitionSign text="כמה מהשלטים שלנו"></TransitionSign>
+                <TransitionSign text="הפרויקטים שלנו"></TransitionSign>
                 <section id="projects">
 
                     <div className="projects-grid">
@@ -66,7 +66,7 @@ function HomePage() {
                         ))}
                     </div>
                 </section>
-                <TransitionSign text="עצבו שלט משלכם"></TransitionSign>
+                <TransitionSign text="עצבו שלט בעצמכם"></TransitionSign>
                 <section id="design">
 
                     <DesignPage />

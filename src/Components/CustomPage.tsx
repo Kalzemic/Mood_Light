@@ -50,6 +50,8 @@ function CustomPage() {
     const [cableColor, setCableColor] = useState("")
     const [hangType, setHangType] = useState("")
     const [selectedFile, setSelectedFile] = useState<File | null>(null);
+    const [cableLength, setCableLength] = useState(2);
+
 
     const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const uploadedFile = e.target.files?.[0];
@@ -104,6 +106,7 @@ function CustomPage() {
                 height,
                 cableEntry,
                 cableColor,
+                cableLength,
                 hangType,
                 image: imageUrl, // ✅ final hosted URL
             };
@@ -266,6 +269,19 @@ function CustomPage() {
                         ))}
                     </div>
                 </div>
+                <div className="segment">
+                    <label>בחרו אורך כבל (במטרים): {cableLength.toFixed(1)} מטר</label>
+                    <input
+                        type="range"
+                        min="0.5"
+                        max="5"
+                        step="0.1"
+                        value={cableLength}
+                        onChange={(e) => setCableLength(parseFloat(e.target.value))}
+                        style={{ width: '100%' }}
+                    />
+                </div>
+
                 <div className="segment">
                     <label>בחרו אפשרות תלייה</label>
                     <div className="board-options">

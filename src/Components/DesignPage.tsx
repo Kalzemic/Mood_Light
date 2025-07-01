@@ -85,6 +85,8 @@ function DesignPage() {
     const [cableEntry, setCableEntry] = useState("")
     const [cableColor, setCableColor] = useState("")
     const [hangType, setHangType] = useState("")
+    const [cableLength, setCableLength] = useState(2);
+
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
@@ -101,6 +103,7 @@ function DesignPage() {
             board,
             cableEntry,
             cableColor,
+            cableLength,
             hangType,
             width,
             height
@@ -148,7 +151,9 @@ function DesignPage() {
                                 >
                                     {fnt}
                                 </button>
+
                             ))}
+                            <h3>לגופן אחר צרו איתנו קשר</h3>
                         </div>
                     </div>
 
@@ -178,7 +183,13 @@ function DesignPage() {
                                 />
                             ))}
                         </div>
+                        {color === "rgb" &&
+
+                            <h3>שלט מחליף צבעים</h3>
+
+                        }
                     </div>
+
 
 
                     {/* Board Selection */}
@@ -285,6 +296,19 @@ function DesignPage() {
                             ))}
                         </div>
                     </div>
+                    <div className="segment">
+                        <label>בחרו אורך כבל (במטרים): {cableLength.toFixed(1)} מטר</label>
+                        <input
+                            type="range"
+                            min="0.5"
+                            max="5"
+                            step="0.1"
+                            value={cableLength}
+                            onChange={(e) => setCableLength(parseFloat(e.target.value))}
+                            style={{ width: '100%' }}
+                        />
+                    </div>
+
                     <div className="segment">
                         <label>בחרו אפשרות תלייה</label>
                         <div className="board-options">
