@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import './QAPage.css'
 import './Page.css'
-import TransitionSign from './TransitionSign';
+
 
 
 const questions = ["question", "question", "question"
