@@ -39,3 +39,20 @@
     color: rgb(255, 143, 225),
 
 }
+
+
+@media (max-width: 768px) {
+    .qa-grid {
+        display: flex;
+        flex-direction: column;
+
+        gap: 20px;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        overflow-y: hidden;
+
+        width: 80%;
+        height: 60%;
+    }
+}
