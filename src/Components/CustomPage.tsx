@@ -103,7 +103,6 @@ function CustomPage() {
     return (
         <div className="design-page">
             <form className="design-form" onSubmit={handleSubmit}>
-                <h2>שלחו לנו שלט משלכם</h2>
                 <div className="segment">
                     <label className="block text-black font-bold mb-1" htmlFor="shem">שם:</label>
                     <input

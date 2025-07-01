@@ -8,6 +8,7 @@ import projectsData from './projects.json'
 import CustomPage from './CustomPage';
 import { motion } from 'framer-motion';
 import QAPage from './QAPage';
+import TransitionSign from './TransitionSign';
 
 
 function HomePage() {
@@ -54,7 +55,9 @@ function HomePage() {
                         </ul>
                     </div>
                 </section>
+                <TransitionSign text="כמה מהשלטים שלנו"></TransitionSign>
                 <section id="projects">
+
                     <div className="projects-grid">
                         {projectsData.projects.map((project, index) => (
                             <div className="project-card" key={index}>
@@ -63,12 +66,16 @@ function HomePage() {
                         ))}
                     </div>
                 </section>
+                <TransitionSign text="עצבו שלט משלכם"></TransitionSign>
                 <section id="design">
+
                     <DesignPage />
                 </section>
+                <TransitionSign text="שלחו לנו את הרעיון שלכם"></TransitionSign>
                 <section id="custom">
                     <CustomPage />
                 </section>
+                <TransitionSign text="שאלות נפוצות" />
                 <section id="qa">
                     <QAPage />
                 </section>

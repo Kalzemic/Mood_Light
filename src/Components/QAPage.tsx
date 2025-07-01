@@ -9,8 +9,8 @@ const questions = ["question", "question", "question"
 
 const QAPage = () => {
     return (
-        <div className="page-content">
-            <TransitionSign text="שאלות נפוצות" />
+        <div>
+
             <motion.div
                 className='qa-grid'
                 initial={{

@@ -23,8 +23,16 @@
     justify-content: center;
     align-items: center;
     border-radius: 30px;
+    margin-top: 300px;
+    margin-bottom: 100px;
     box-shadow: 0 0 30px rgb(255, 143, 225);
 }
+
+.transition-sign .qa-head {
+    margin: 0;
+    text-align: center;
+}
+
 
 @keyframes fadeIn {
     from {

@@ -7,7 +7,7 @@
     justify-content: center;
     /* Centers the grid */
     overflow-y: hidden;
-    margin-top: 600px;
+    margin-top: 5px;
 }
 
 @media (max-width: 768px) {
@@ -17,6 +17,7 @@
 }
 
 .project-card {
+
     display: flex;
     height: 200px;
     width: 200px;
