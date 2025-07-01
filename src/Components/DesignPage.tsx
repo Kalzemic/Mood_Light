@@ -160,7 +160,18 @@ function DesignPage() {
                                 <button
                                     key={col.value}
                                     type="button"
-                                    style={{ backgroundColor: col.value, width: 60, height: 60 }}
+                                    style={{
+                                        width: 60,
+                                        height: 60,
+                                        ...(col.value === "rgb"
+                                            ? {
+                                                backgroundImage: "linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet)",
+                                                backgroundSize: "100% 100%",
+                                                animation: "rainbowMove 4s linear infinite",
+                                                border: "1px solid black"
+                                            }
+                                            : { backgroundColor: col.value })
+                                    }}
                                     className={col.value === color ? "selected-option" : ""}
                                     onClick={() => setColor(col.value)}
                                     aria-label={col.name}
@@ -168,6 +179,7 @@ function DesignPage() {
                             ))}
                         </div>
                     </div>
+
 
                     {/* Board Selection */}
                     <div className="segment">
