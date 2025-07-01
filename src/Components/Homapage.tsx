@@ -9,9 +9,21 @@ import CustomPage from './CustomPage';
 import { motion } from 'framer-motion';
 import TransitionSign from './TransitionSign';
 import FAQPage from './FAQPage';
+import { useState } from 'react';
 
 
 function HomePage() {
+
+    const [popupImage, setPopupImage] = useState<string | null>(null);
+
+    const handleImageClick = (imgSrc: string) => {
+        setPopupImage(imgSrc);
+    };
+
+    const closePopup = () => {
+        setPopupImage(null);
+    };
+
 
     return (
         <div>
@@ -57,15 +69,28 @@ function HomePage() {
                 </section>
                 <TransitionSign text="הפרויקטים שלנו"></TransitionSign>
                 <section id="projects">
-
                     <div className="projects-grid">
                         {projectsData.projects.map((project, index) => (
-                            <div className="project-card" key={index}>
+                            <div
+                                className="project-card"
+                                key={index}
+                                onClick={() => handleImageClick(project)}
+                            >
                                 <img src={project} alt="תמונה עבור אחד הפרויקטים שלנו" />
                             </div>
                         ))}
                     </div>
                 </section>
+
+                {popupImage && (
+                    <div className="image-popup" onClick={closePopup}>
+                        <img
+                            src={popupImage}
+                            alt="תמונה מוגדלת"
+                            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking on the image
+                        />
+                    </div>
+                )}
                 <TransitionSign text="עצבו שלט בעצמכם"></TransitionSign>
                 <section id="design">
 
