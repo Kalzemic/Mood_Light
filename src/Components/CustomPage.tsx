@@ -80,7 +80,7 @@ function CustomPage() {
 
         emailjs.send(
             'Mood_Light_1',
-            'order_form_1',
+            'order_form_custom',
             templateParams,
             'ygrZNz9RXoV7GvbyF'
         )
