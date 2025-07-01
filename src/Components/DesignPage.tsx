@@ -38,7 +38,9 @@ const colors = [
     { name: "Warm White", value: "#fefbd8" },
     { name: "Gold", value: "#ffd700" },
     { name: "Silver", value: "#c0c0c0" },
-    { name: "Cool White", value: "#f5f5f5" }
+    { name: "Cool White", value: "#f5f5f5" },
+    { name: "RGB", value: "rgb" }
+
 ];
 
 const sizes = [

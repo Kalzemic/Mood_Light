@@ -7,8 +7,8 @@ import './Homapage.css'
 import projectsData from './projects.json'
 import CustomPage from './CustomPage';
 import { motion } from 'framer-motion';
-import QAPage from './QAPage';
 import TransitionSign from './TransitionSign';
+import FAQPage from './FAQPage';
 
 
 function HomePage() {
@@ -77,7 +77,7 @@ function HomePage() {
                 </section>
                 <TransitionSign text="שאלות נפוצות" />
                 <section id="qa">
-                    <QAPage />
+                    <FAQPage />
                 </section>
 
             </div>

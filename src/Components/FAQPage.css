@@ -1,3 +1,8 @@
+.faq-page {
+    display: flex;
+    justify-content: center;
+}
+
 .qa-grid {
     display: flex;
     flex-direction: row;
@@ -15,8 +20,8 @@
 
 .qa-card {
     display: flex;
-    height: 200px;
-    width: 200px;
+    height: 300px;
+    width: 350px;
     justify-content: center;
     align-items: center;
     overflow: hidden;
