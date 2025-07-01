@@ -4,6 +4,8 @@ import NeonSign from "./NeonSign";
 import backgrounds from './backgrounds.json';
 import './DesignPage.css';
 
+
+
 const fonts = [
     "Sacramento", "Dancing Script", "Great Vibes", "Pacifico", "Assistant",
     "Rubik", "Amatic SC", "Baloo 2", "Bangers", "Caveat",
@@ -11,6 +13,10 @@ const fonts = [
     "Montserrat", "Orbitron", "Playfair Display", "Raleway", "Satisfy",
     "Teko", "Tinos", "Ubuntu", "Varela Round", "Yanone Kaffeesatz"
 ];
+
+const cable_entries = ["ימין", "שמאל", "מעלה", "מטה"]
+const hang_types = ["ברגים", "חבלים"]
+const cable_color = ["שחור", "שקוף"]
 
 const colors = [
     { name: "Pink", value: "#ff00ff" },
@@ -55,6 +61,12 @@ const boards = [
     "בורד מרובע"
 ];
 
+const board_image: any = {
+    "ללא בורד אחורי": "/no_board.png",
+    "חתוך לפי צורה": "/shape_board.png",
+    "בורד מרובע": "/square_board.png"
+}
+
 function DesignPage() {
     const [isOn, setIsOn] = useState(true);
     const [text, setText] = useState("Mood Light");
@@ -68,6 +80,9 @@ function DesignPage() {
     const [phone, setPhone] = useState("");
     const [board, setBoard] = useState("");
     const [size, setSize] = useState("");
+    const [cableEntry, setCableEntry] = useState("")
+    const [cableColor, setCableColor] = useState("")
+    const [hangType, setHangType] = useState("")
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
@@ -82,9 +97,11 @@ function DesignPage() {
             font,
             color: selectedColorName,
             board,
-            size,
-            width: width + "cm",
-            height: height + "cm"
+            cableEntry,
+            cableColor,
+            hangType,
+            width,
+            height
         };
 
 
@@ -133,7 +150,7 @@ function DesignPage() {
                         </div>
                     </div>
 
-                    {/* Color Selection */}
+
                     <div className="segment">
                         <label className="block text-black font-bold mb-1">בחרו צבע</label>
                         <div className="color-options">
@@ -165,6 +182,18 @@ function DesignPage() {
                                 </button>
                             ))}
                         </div>
+                        {board != "" &&
+                            <div className="selected-board">
+                                <img
+                                    alt="board-image"
+                                    style={{
+                                        backgroundImage: `url(${board_image[board]})`,
+                                        backgroundSize: "cover",
+                                        width: 100,
+                                        height: 100,
+                                    }} />
+                            </div>
+                        }
                     </div>
 
                     {/* Size Selection */}
@@ -211,9 +240,51 @@ function DesignPage() {
                             />
                         </div>
                     )}
-
-
-
+                    <div className="segment">
+                        <label>בחרו את כיוון כניסת הכבל לשלט</label>
+                        <div className="board-options">
+                            {cable_entries.map(ce => (
+                                <button
+                                    key={ce}
+                                    type="button"
+                                    className={ce === cableEntry ? "selected-option" : ""}
+                                    onClick={() => setCableEntry(ce)}
+                                >
+                                    {ce}
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+                    <div className="segment">
+                        <label>בחרו את צבע הכבל</label>
+                        <div className="board-options">
+                            {cable_color.map(cc => (
+                                <button
+                                    key={cc}
+                                    type="button"
+                                    className={cc === cableColor ? "selected-option" : ""}
+                                    onClick={() => setCableColor(cc)}
+                                >
+                                    {cc}
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+                    <div className="segment">
+                        <label>בחרו אפשרות תלייה</label>
+                        <div className="board-options">
+                            {hang_types.map(ht => (
+                                <button
+                                    key={ht}
+                                    type="button"
+                                    className={ht === cableColor ? "selected-option" : ""}
+                                    onClick={() => setHangType(ht)}
+                                >
+                                    {ht}
+                                </button>
+                            ))}
+                        </div>
+                    </div>
                     {/* User Info */}
                     <div className="segment">
                         <label className="block text-black font-bold mb-1" htmlFor="name">:שם</label>

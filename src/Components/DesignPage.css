@@ -63,6 +63,12 @@ button:focus {
     box-shadow: 0 0 10px cyan;
 }
 
+.selected-board {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .board-option,
 .size-option {

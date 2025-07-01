@@ -8,7 +8,7 @@ notes:
 
 better page sepration, figure out nice transitions
 
-sign above options on designpage
+
 
 
 
@@ -18,29 +18,11 @@ sign above options on designpage
 
 
 
-on designpage form: 
-
-    in board options: 
-    add squared board option for emailjs form
-
-
-
-for designform board option: 
-    add picture for each board option showcased upon selection
 
 designform color options: 
     add rgb option 
 
 
-designform hang options:
-    hang by screws
-    hang by rope
-
-cable option on designform:
-    cable-color:
-        black or clear 
-    cable-entry:
-        left, right , up or down
 
 
 in projectsPage:
