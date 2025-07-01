@@ -70,7 +70,7 @@
 
 
     .qa-card:hover {
-        transform: scale(1.3);
+        transform: scale(1.0);
         box-shadow: 0 0 20px rgb(255, 143, 225);
     }
 
