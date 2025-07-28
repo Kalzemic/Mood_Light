@@ -384,6 +384,7 @@ function DesignPage() {
                     <label htmlFor="background">בחרו רקע</label>
                     <div className="background-options">
                         <button
+                            aria-label="ללא רקע"
                             id="background"
                             type="button"
                             className={background === "" ? "selected-option" : ""}
@@ -393,6 +394,7 @@ function DesignPage() {
                         </button>
                         {backgrounds.backgrounds.map((bg, index) => (
                             <button
+                                aria-label={bg}
                                 key={index}
                                 type="button"
                                 className={bg === background ? "selected-option" : ""}
