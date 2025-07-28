@@ -16,10 +16,10 @@ function Navbar() {
                     </div>
                     <div className="navbar-center desktop-menu">
                         <ul>
-                            <li><a href="#homepage">דף הבית</a></li>
-                            <li><a href="#projects">הפרויקטים שלנו</a></li>
-                            <li><a href="#design">עצבו שלט בעצמכם</a></li>
-                            <li><a href="#custom">שלחו לנו רעיון משלכם</a></li>
+                            <li><a href="#homepage" aria-label="קישור לדף הבית">דף הבית</a></li>
+                            <li><a href="#projects" aria-label="קישור לדף הפרויקטים שלנו">הפרויקטים שלנו</a></li>
+                            <li><a href="#design" aria-label="קישור לדף הזמנת שלט">עצבו שלט בעצמכם</a></li>
+                            <li><a href="#custom" aria-label="קישור לשליחת רעיון שלכם">שלחו לנו רעיון משלכם</a></li>
                         </ul>
                     </div>
                     <div className="hamburger-menu" onClick={toggleSidebar}>
@@ -29,10 +29,10 @@ function Navbar() {
             </nav>
             <div className={`sidebar ${isOpen ? 'open' : ''}`}>
                 <ul>
-                    <li><a href="#homepage" onClick={toggleSidebar}>דף הבית</a></li>
-                    <li><a href="#projects" onClick={toggleSidebar}>הפרויקטים שלנו</a></li>
-                    <li><a href="#design" onClick={toggleSidebar}>עצבו שלט בעצמכם</a></li>
-                    <li><a href="#custom" onClick={toggleSidebar}>שלחו לנו לוגו משלכם</a></li>
+                    <li><a href="#homepage" aria-label="קישור לדף הבית">דף הבית</a></li>
+                    <li><a href="#projects" aria-label="קישור לדף הפרויקטים שלנו">הפרויקטים שלנו</a></li>
+                    <li><a href="#design" aria-label="קישור לדף הזמנת שלט">עצבו שלט בעצמכם</a></li>
+                    <li><a href="#custom" aria-label="קישור לשליחת רעיון שלכם">שלחו לנו רעיון משלכם</a></li>
                 </ul>
             </div>
         </>
