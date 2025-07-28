@@ -297,8 +297,9 @@ function DesignPage() {
                         </div>
                     </div>
                     <div className="segment">
-                        <label>בחרו אורך כבל (במטרים): {cableLength.toFixed(1)} מטר</label>
+                        <label htmlFor="cable-length">בחרו אורך כבל (במטרים): {cableLength.toFixed(1)} מטר</label>
                         <input
+                            id="cable-length"
                             type="range"
                             min="0.5"
                             max="5"

@@ -165,10 +165,11 @@ function CustomPage() {
                         onChange={(e) => setPhone(e.target.value)} />
                 </div>
                 <div className="segment">
-                    <label>בחרו לוח אחורי</label>
+                    <label htmlFor="board-type">בחרו לוח אחורי</label>
                     <div className="board-options">
                         {boards.map(bo => (
                             <button
+                                id="board-type"
                                 key={bo}
                                 type="button"
                                 className={bo === board ? "selected-option" : ""}
@@ -197,10 +198,11 @@ function CustomPage() {
 
                 {/* Size Selection */}
                 <div className="segment">
-                    <label>בחרו גודל</label>
+                    <label htmlFor="size">בחרו גודל</label>
                     <div className="size-options">
                         {sizes.map(si => (
                             <button
+                                id="size"
                                 key={si}
                                 type="button"
                                 className={si === size ? "selected-option" : ""}
@@ -225,10 +227,11 @@ function CustomPage() {
                 </div>
                 {size === "בחירה אישית" && (
                     <div className="segment">
-                        <label>
+                        <label htmlFor="custom-size">
                             רוחב: {width} ס״מ &nbsp; | &nbsp; גובה: {height} ס״מ
                         </label>
                         <input
+                            id="custom-size"
                             className="size-slider"
                             type="range"
                             min="70"
@@ -240,10 +243,11 @@ function CustomPage() {
                     </div>
                 )}
                 <div className="segment">
-                    <label>בחרו מאיפה תרצו שהכבל ייצא מהשלט</label>
+                    <label htmlFor="cable-length">בחרו מאיפה תרצו שהכבל ייצא מהשלט</label>
                     <div className="board-options">
                         {cable_entries.map(ce => (
                             <button
+                                id="cable-length"
                                 key={ce}
                                 type="button"
                                 className={ce === cableEntry ? "selected-option" : ""}
@@ -255,10 +259,11 @@ function CustomPage() {
                     </div>
                 </div>
                 <div className="segment">
-                    <label>בחרו את צבע הכבל</label>
+                    <label htmlFor="cable-color">בחרו את צבע הכבל</label>
                     <div className="board-options">
                         {cable_color.map(cc => (
                             <button
+                                id="cable-color"
                                 key={cc}
                                 type="button"
                                 className={cc === cableColor ? "selected-option" : ""}
@@ -270,8 +275,9 @@ function CustomPage() {
                     </div>
                 </div>
                 <div className="segment">
-                    <label>בחרו אורך כבל (במטרים): {cableLength.toFixed(1)} מטר</label>
+                    <label htmlFor="cable-length">בחרו אורך כבל (במטרים): {cableLength.toFixed(1)} מטר</label>
                     <input
+                        id="cable-length"
                         type="range"
                         min="0.5"
                         max="5"
@@ -283,10 +289,11 @@ function CustomPage() {
                 </div>
 
                 <div className="segment">
-                    <label>בחרו אפשרות תלייה</label>
+                    <label htmlFor="board-option">בחרו אפשרות תלייה</label>
                     <div className="board-options">
                         {hang_types.map(ht => (
                             <button
+                                id="board-option"
                                 key={ht}
                                 type="button"
                                 className={ht === cableColor ? "selected-option" : ""}
