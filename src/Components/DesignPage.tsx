@@ -164,6 +164,7 @@ function DesignPage() {
                         <div className="color-options">
                             {colors.map(col => (
                                 <button
+
                                     id="color-option"
                                     key={col.value}
                                     type="button"
@@ -200,6 +201,7 @@ function DesignPage() {
                         <div className="board-options">
                             {boards.map(bo => (
                                 <button
+                                    aria-label={bo}
                                     id="board-option"
                                     key={bo}
                                     type="button"
@@ -231,6 +233,7 @@ function DesignPage() {
                         <div className="size-options">
                             {sizes.map(si => (
                                 <button
+                                    aria-label={si}
                                     id="size"
                                     key={si}
                                     type="button"
@@ -276,6 +279,7 @@ function DesignPage() {
                         <div className="board-options">
                             {cable_entries.map(ce => (
                                 <button
+                                    aria-label={ce}
                                     id="cable-exit"
                                     key={ce}
                                     type="button"
@@ -292,6 +296,7 @@ function DesignPage() {
                         <div className="board-options">
                             {cable_color.map(cc => (
                                 <button
+                                    aria-label={cc}
                                     id="cable-color"
                                     key={cc}
                                     type="button"
@@ -322,6 +327,7 @@ function DesignPage() {
                         <div className="board-options">
                             {hang_types.map(ht => (
                                 <button
+                                    aria-label={ht}
                                     id="board-option"
                                     key={ht}
                                     type="button"

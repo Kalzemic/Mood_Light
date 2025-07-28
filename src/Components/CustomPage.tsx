@@ -169,6 +169,7 @@ function CustomPage() {
                     <div className="board-options">
                         {boards.map(bo => (
                             <button
+                                aria-label={bo}
                                 id="board-type"
                                 key={bo}
                                 type="button"
@@ -204,6 +205,7 @@ function CustomPage() {
                             <button
                                 id="size"
                                 key={si}
+                                aria-label={si}
                                 type="button"
                                 className={si === size ? "selected-option" : ""}
                                 onClick={() => {
@@ -249,6 +251,7 @@ function CustomPage() {
                             <button
                                 id="cable-length"
                                 key={ce}
+                                aria-label={ce}
                                 type="button"
                                 className={ce === cableEntry ? "selected-option" : ""}
                                 onClick={() => setCableEntry(ce)}
@@ -265,6 +268,7 @@ function CustomPage() {
                             <button
                                 id="cable-color"
                                 key={cc}
+                                aria-label={cc}
                                 type="button"
                                 className={cc === cableColor ? "selected-option" : ""}
                                 onClick={() => setCableColor(cc)}
@@ -295,6 +299,7 @@ function CustomPage() {
                             <button
                                 id="board-option"
                                 key={ht}
+                                aria-label={ht}
                                 type="button"
                                 className={ht === cableColor ? "selected-option" : ""}
                                 onClick={() => setHangType(ht)}
