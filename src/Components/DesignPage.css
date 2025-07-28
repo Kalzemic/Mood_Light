@@ -42,7 +42,7 @@ size-slider {
 
 }
 
-.font-options {
+/* .font-options {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 0.625rem;
@@ -67,7 +67,7 @@ size-slider {
     grid-template-columns: repeat(3, 1fr);
     gap: 0.625rem;
 }
-
+ */
 
 
 .segment h3 {
@@ -134,18 +134,12 @@ button:focus {
         overflow-x: hidden;
     }
 
-
     .design-form {
         min-width: unset;
         width: 90%;
         height: auto;
         max-height: 90vh;
         overflow-y: auto;
-        overflow-x: none;
-    }
-
-    .font-options {
-        grid-template-columns: repeat(auto-fit, minimax(6rem, 1fr));
     }
 
     .canvas-container {
