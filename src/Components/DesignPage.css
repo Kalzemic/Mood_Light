@@ -36,6 +36,40 @@ size-slider {
     background-color: black;
 }
 
+.segment {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.font-options {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.625rem;
+}
+
+.color-options {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.625rem;
+}
+
+.board-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.625rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.size-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.625rem;
+}
+
+
+
 .segment h3 {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -132,5 +166,6 @@ button:focus {
         font-size: 14px;
         padding: 8px;
         margin: 5px;
+        gap: 2px;
     }
 }
