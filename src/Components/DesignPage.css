@@ -141,6 +141,7 @@ button:focus {
         height: auto;
         max-height: 90vh;
         overflow-y: auto;
+        overflow-x: none;
     }
 
     .font-options {
