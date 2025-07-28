@@ -134,12 +134,17 @@ button:focus {
         overflow-x: hidden;
     }
 
+
     .design-form {
         min-width: unset;
         width: 90%;
         height: auto;
         max-height: 90vh;
         overflow-y: auto;
+    }
+
+    .font-options {
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .canvas-container {
