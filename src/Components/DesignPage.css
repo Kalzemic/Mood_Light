@@ -144,7 +144,7 @@ button:focus {
     }
 
     .font-options {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, minimax(6rem, 1fr));
     }
 
     .canvas-container {
