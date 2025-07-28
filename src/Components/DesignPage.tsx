@@ -394,6 +394,7 @@ function DesignPage() {
                         </button>
                         {backgrounds.backgrounds.map((bg, index) => (
                             <button
+                                id="background"
                                 aria-label={bg}
                                 key={index}
                                 type="button"
@@ -403,6 +404,7 @@ function DesignPage() {
                                     backgroundSize: "cover",
                                     width: 45,
                                     height: 45,
+
                                 }}
                                 onClick={() => setBackground(bg)}
                             />
