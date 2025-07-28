@@ -139,10 +139,11 @@ function DesignPage() {
 
                     {/* Font Selection */}
                     <div className="segment">
-                        <label className="block text-black font-bold mb-1">בחרו גופן</label>
+                        <label htmlFor="font-option" className="block text-black font-bold mb-1">בחרו גופן</label>
                         <div className="font-options">
                             {fonts.map(fnt => (
                                 <button
+                                    id="font-option"
                                     key={fnt}
                                     type="button"
                                     style={{ fontFamily: fnt }}
@@ -159,10 +160,11 @@ function DesignPage() {
 
 
                     <div className="segment">
-                        <label className="block text-black font-bold mb-1">בחרו צבע</label>
+                        <label htmlFor="color-option" className="block text-black font-bold mb-1">בחרו צבע</label>
                         <div className="color-options">
                             {colors.map(col => (
                                 <button
+                                    id="color-option"
                                     key={col.value}
                                     type="button"
                                     style={{
@@ -194,10 +196,11 @@ function DesignPage() {
 
                     {/* Board Selection */}
                     <div className="segment">
-                        <label>בחרו לוח אחורי</label>
+                        <label htmlFor="board-option">בחרו לוח אחורי</label>
                         <div className="board-options">
                             {boards.map(bo => (
                                 <button
+                                    id="board-option"
                                     key={bo}
                                     type="button"
                                     className={bo === board ? "selected-option" : ""}
@@ -224,10 +227,11 @@ function DesignPage() {
 
                     {/* Size Selection */}
                     <div className="segment">
-                        <label>בחרו גודל</label>
+                        <label htmlFor="size">בחרו גודל</label>
                         <div className="size-options">
                             {sizes.map(si => (
                                 <button
+                                    id="size"
                                     key={si}
                                     type="button"
                                     className={si === size ? "selected-option" : ""}
@@ -252,10 +256,11 @@ function DesignPage() {
                     </div>
                     {size === "בחירה אישית" && (
                         <div className="segment">
-                            <label>
+                            <label htmlFor="custom-size">
                                 רוחב: {width} ס״מ &nbsp; | &nbsp; גובה: {height} ס״מ
                             </label>
                             <input
+                                id="custom-size"
                                 className="size-slider"
                                 type="range"
                                 min="70"
@@ -267,10 +272,11 @@ function DesignPage() {
                         </div>
                     )}
                     <div className="segment">
-                        <label>בחרו מאיפה תרצו שהכבל ייצא מהשלט</label>
+                        <label htmlFor="cable-exit">בחרו מאיפה תרצו שהכבל ייצא מהשלט</label>
                         <div className="board-options">
                             {cable_entries.map(ce => (
                                 <button
+                                    id="cable-exit"
                                     key={ce}
                                     type="button"
                                     className={ce === cableEntry ? "selected-option" : ""}
@@ -282,10 +288,11 @@ function DesignPage() {
                         </div>
                     </div>
                     <div className="segment">
-                        <label>בחרו את צבע הכבל</label>
+                        <label htmlFor="cable-color">בחרו את צבע הכבל</label>
                         <div className="board-options">
                             {cable_color.map(cc => (
                                 <button
+                                    id="cable-color"
                                     key={cc}
                                     type="button"
                                     className={cc === cableColor ? "selected-option" : ""}
@@ -311,10 +318,11 @@ function DesignPage() {
                     </div>
 
                     <div className="segment">
-                        <label>בחרו אפשרות תלייה</label>
+                        <label htmlFor="board-option">בחרו אפשרות תלייה</label>
                         <div className="board-options">
                             {hang_types.map(ht => (
                                 <button
+                                    id="board-option"
                                     key={ht}
                                     type="button"
                                     className={ht === cableColor ? "selected-option" : ""}
@@ -367,9 +375,10 @@ function DesignPage() {
 
                 {/* Background Selector */}
                 <div className="segment">
-                    <label>בחרו רקע</label>
+                    <label htmlFor="background">בחרו רקע</label>
                     <div className="background-options">
                         <button
+                            id="background"
                             type="button"
                             className={background === "" ? "selected-option" : ""}
                             onClick={() => setBackground("")}
