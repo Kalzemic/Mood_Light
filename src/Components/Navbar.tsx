@@ -19,7 +19,7 @@ function Navbar() {
                             <li><a href="#homepage">דף הבית</a></li>
                             <li><a href="#projects">הפרויקטים שלנו</a></li>
                             <li><a href="#design">עצבו שלט בעצמכם</a></li>
-                            <li><a href="#custom">שלחו לנו לוגו משלכם</a></li>
+                            <li><a href="#custom">שלחו לנו רעיון משלכם</a></li>
                         </ul>
                     </div>
                     <div className="hamburger-menu" onClick={toggleSidebar}>

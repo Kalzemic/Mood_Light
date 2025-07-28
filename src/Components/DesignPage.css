@@ -91,7 +91,7 @@ button:focus {
 }
 
 
-@media (max-width: 768px) {
+@media (orientation: portrait) {
     .design-page {
         flex-direction: column-reverse;
         align-items: center;

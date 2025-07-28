@@ -14,6 +14,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+label {
+  color: rgb(225, 8, 178);
+}
+
 a {
   font-weight: 500;
   color: #646cff;

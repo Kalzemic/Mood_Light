@@ -85,6 +85,10 @@ canvas-container NeonSign {
     color: rgb(225, 8, 178);
 }
 
+h3 {
+    color: rgb(225, 8, 178);
+}
+
 .footer-legal {
     margin-top: 20px;
     direction: ltr;
@@ -97,7 +101,7 @@ canvas-container NeonSign {
     color: rgb(225, 8, 178);
 }
 
-@media (max-width: 768px) {
+@media (orientation: portrait) {
     .transition-sign {
         display: flex;
         background-color: rgba(0, 0, 0, 0.1);

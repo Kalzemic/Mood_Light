@@ -10,7 +10,7 @@
     margin-top: 5px;
 }
 
-@media (max-width: 768px) {
+@media (orientation: portrait) {
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);
     }

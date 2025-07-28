@@ -139,7 +139,7 @@
     text-shadow: 0 0 30px rgb(255, 143, 225);
 }
 
-@media (max-width: 768px) {
+@media (orientation: portrait) {
     .desktop-menu {
         display: none;
     }

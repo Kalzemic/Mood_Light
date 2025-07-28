@@ -61,7 +61,7 @@
 }
 
 
-@media (max-width: 600px) {
+@media (orientation: portrait) {
 
   .homepage-buttons {
 

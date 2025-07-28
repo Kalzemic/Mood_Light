@@ -41,7 +41,7 @@
 }
 
 
-@media (max-width: 768px) {
+@media (orientation: portrait) {
     .qa-grid {
         display: flex;
         flex-direction: column;
