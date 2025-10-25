@@ -95,7 +95,10 @@ function HomePage() {
                     <span>✉️ אימייל: mood.light.sa@gmail.com</span><br />
                     <div className="footer-legal">
                         <span>© {new Date().getFullYear()} Mood-Light-ltd — כל הזכויות שמורות</span><br />
-                        <span className="signature">Made by Michael Zizov</span>
+                        <span
+
+                            className="signature"
+                        >Made by <button onClick={() => window.open('http://www.archweb.co.il')}>Archweb</button></span>
                     </div>
                 </div>
             </footer>

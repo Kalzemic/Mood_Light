@@ -83,7 +83,7 @@ function CustomPage() {
         }
 
         const data = await response.json();
-        return data.secure_url; // ✅ hosted image URL
+        return data.secure_url;
     }
 
 

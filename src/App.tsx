@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import HomePage from './Components/Homapage'
 import Navbar from './Components/Navbar'
 import DesignPage from './Components/DesignPage'
+import AccessibilityMenu from './Components/AccessibilityMenu'
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       {/* Fixed full-screen background image */}
 
       <Navbar />
+      <AccessibilityMenu />
 
       <div className="main-container">
         {/* <BackgroundCarousel /> */}

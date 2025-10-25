@@ -1,0 +1,140 @@
+/* ========================== */
+/* Floating Container + Button */
+/* ========================== */
+
+.accessibility-container {
+    position: fixed;
+    bottom: 3.6rem;
+    right: 3.6rem;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    pointer-events: none;
+
+}
+
+.accessibility-toggle {
+    position: fixed;
+    display: flex;
+    pointer-events: all;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    background-color: #ffffff;
+    margin-right: 0;
+    border: none;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.accessibility-toggle:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.accessibility-toggle img {
+    width: 28px;
+    height: 28px;
+    /* filter: invert(1); */
+}
+
+/* ========================== */
+/*          Panel             */
+/* ========================== */
+
+.accessibility-panel {
+    margin-top: 0.5rem;
+    width: 240px;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    font-family: system-ui, sans-serif;
+}
+
+.accessibility-panel.open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.accessibility-panel h3 {
+    color: #ffffff;
+    margin: 0;
+    background-color: #080809;
+    padding: 0.7rem 1rem;
+    font-size: 1.1rem;
+}
+
+.accessibility-panel .options {
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    padding: 0.8rem 1rem 1rem;
+    gap: 0.6rem;
+}
+
+.accessibility-panel label {
+    font-size: 0.95rem;
+    color: rgb(255, 143, 225);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+/* ========================== */
+/*      Accessibility Styles  */
+/* ========================== */
+
+/* Base contrast mode */
+body.highContrast,
+body.highContrast * {
+    background-color: black !important;
+    color: yellow !important;
+    border-color: yellow !important;
+}
+
+/* Make links stand out clearly */
+body.highContrast a {
+    color: cyan !important;
+    text-decoration: underline !important;
+}
+
+/* Tweak buttons separately for visibility */
+body.highContrast button,
+body.highContrast input[type="button"],
+body.highContrast input[type="submit"] {
+    background-color: #222 !important;
+    color: white !important;
+    border: 2px solid white !important;
+}
+
+/* Optional: images slightly dimmed */
+body.highContrast img {
+    filter: brightness(0.8) contrast(1.3) !important;
+}
+
+body.largeText {
+    font-size: 120%;
+}
+
+body.reducedMotion * {
+    animation: none !important;
+    transition: none !important;
+}
+
+body.underlineLinks a {
+    text-decoration: underline !important;
+}
