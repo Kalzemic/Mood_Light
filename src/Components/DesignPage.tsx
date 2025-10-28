@@ -132,9 +132,14 @@ function DesignPage() {
                     {/* Text Input */}
                     <div className="segment">
                         <label htmlFor="text" className="block text-black font-bold mb-1">הזינו את תוכן השלט</label>
-                        <input
-                            className=" rounded-2xl bg-black text-pink-400 border border-pink-400 rounded px-3 py-2 placeholder-pink-300"
-                            id="text" type="text" value={text} onChange={e => setText(e.target.value)} />
+                        <textarea
+                            className='sign-text'
+                            id='body'
+                            value={text}
+                            onChange={(e) => setText(e.target.value)}
+                            rows={7}
+                            cols={40}
+                        />
                     </div>
 
                     {/* Font Selection */}

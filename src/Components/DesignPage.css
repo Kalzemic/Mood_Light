@@ -26,6 +26,17 @@
     overflow-y: auto;
 }
 
+.sign-text {
+    display: flex;
+    width: 90%;
+    outline-style: solid;
+    outline-width: 2px;
+    outline-color: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    padding: 20px;
+    color: white;
+}
+
 .design-form button {
     /* background: black; */
     box-shadow: 0 0 20px rgb(255, 143, 225);
@@ -39,6 +50,8 @@ size-slider {
 .segment {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
 }
 
