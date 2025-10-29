@@ -90,6 +90,10 @@ function CustomPage() {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
+        if (email === "" || phone === "" || name === "") {
+            alert("אירעה שגיאה, אנא וודאו שכתבתם שם, מייל ומספר טלפון")
+            return;
+        }
         try {
             let imageUrl = "לא צורפה תמונה";
 

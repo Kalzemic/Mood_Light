@@ -90,7 +90,10 @@ function DesignPage() {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-
+        if (email === "" || phone === "" || name === "") {
+            alert("אירעה שגיאה, אנא וודאו שכתבתם שם, מייל ומספר טלפון")
+            return;
+        }
         const selectedColorName = colors.find(c => c.value === color)?.name || color;
 
         const templateParams = {
