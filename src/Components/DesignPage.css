@@ -31,10 +31,10 @@
     width: 90%;
     outline-style: solid;
     outline-width: 2px;
-    outline-color: rgba(255, 255, 255, 0.3);
+    outline-color: rgb(255, 143, 225);
     border-radius: 20px;
     padding: 20px;
-    color: white;
+    color: rgb(255, 143, 225);
 }
 
 .design-form button {
