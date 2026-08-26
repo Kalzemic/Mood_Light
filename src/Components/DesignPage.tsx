@@ -162,8 +162,9 @@ function DesignPage() {
                                 </button>
 
                             ))}
-                            <h3>לגופן אחר צרו איתנו קשר</h3>
+                            
                         </div>
+                        <h3 className='custom-font-notification'>לגופן אחר צרו איתנו קשר</h3>
                     </div>
 
 
