@@ -117,7 +117,7 @@ function DesignPage() {
             'Mood_Light_1',
             'order_form_1',
             templateParams,
-            'ygrZNz9RXoV7GvbyF'
+            'segYXLpXB8j7s7PaT'
         ).then(() => {
             alert('הפרטים נשלחו בהצלחה!');
         }).catch((error) => {
