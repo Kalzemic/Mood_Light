@@ -119,6 +119,7 @@ function DesignPage() {
             templateParams,
             'segYXLpXB8j7s7PaT'
         ).then(() => {
+            window.fbq?.('track', 'Lead');   
             alert('הפרטים נשלחו בהצלחה!');
         }).catch((error) => {
             console.error('FAILED...', error);

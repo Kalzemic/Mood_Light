@@ -121,7 +121,8 @@ function CustomPage() {
                 templateParams,
                 'ygrZNz9RXoV7GvbyF'
             );
-
+            
+            window.fbq?.('track', 'Lead');   
             alert('הפרטים נשלחו בהצלחה!');
             setName("");
             setEmail("");
